@@ -35,7 +35,8 @@ namespace WpfApp1
             w = double.Parse(weight.Text);
             t = (w / h/h) * 703;
 
-            BMI.Text = Convert.ToString(t);
+            BMI.Text = Convert.ToString(Convert.ToInt32(t));
+            
 
 
             if (t < 18.5)
@@ -65,6 +66,11 @@ namespace WpfApp1
             weight.Text = "";
             BMI.Text = "";
             M.Text = "";
+        }
+
+        private void exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
