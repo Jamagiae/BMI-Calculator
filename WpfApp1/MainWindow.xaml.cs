@@ -66,8 +66,9 @@ namespace WpfApp1
             customer1.lastName = LN.Text;
             customer1.firstName = FN.Text;
             customer1.phoneNumber = PN.Text;
-            //customer1.heightInches = Convert.ToInt32(height.Text);
-            //customer1.weightLbs = Convert.ToInt32(weight.Text);
+            customer1.heightInches = Convert.ToInt32(height.Text);
+            customer1.weightLbs = Convert.ToInt32(weight.Text);
+            customer1.custBMI = Convert.ToInt32(BMI.Text);
 
             h = double.Parse(height.Text);
             w = double.Parse(weight.Text);
@@ -121,6 +122,7 @@ namespace WpfApp1
                 PN.Text = cust.phoneNumber;
                 height.Text = Convert.ToString(cust.heightInches);
                 weight.Text = Convert.ToString(cust.weightLbs);
+                BMI.Text = Convert.ToString(cust.custBMI);
 
 
             }
